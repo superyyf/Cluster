@@ -1,7 +1,7 @@
 function [MatchesIndex] = mvMismatches(cluster_1,cluster_2)
 %remove mismatches
 %
-alpha = 0.1;
+alpha = 0.5;
 [n,~] = size(cluster_1);
 ClusterNum_1 = int32(cluster_1(n,4)+1);
 ClusterNum_2 = int32(cluster_2(n,4)+1);
