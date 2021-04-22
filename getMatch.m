@@ -18,7 +18,7 @@ end
 [f1,d1] = vl_sift(I1);
 [f2,d2] = vl_sift(I2);
 
-[matches, scores] = vl_ubcmatch(d1, d2);
+[matches, scores] = vl_ubcmatch(d1, d2, 1.2);
 
 [drop, perm] = sort(scores, 'descend');
 matches = matches(:, perm);
