@@ -52,13 +52,13 @@ imshow(img_show) ;
 hold on ;
 
 [row1,col1,~] = size(img1);
-c=['k';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w'];
+c=['k';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w';'r';'g';'b';'y';'m';'c';'w'];
 for i = 1:size(C1,2)
     points = C1{1,i};
     for j = 1:size(points,1)
         X = points(:,2).*col1;
         Y = points(:,3).*row1;
-        scatter(X,Y,20,c(i),'filled');
+        scatter(X,Y,30,c(i),'filled');
     end
 end
 
@@ -66,10 +66,32 @@ end
 for i = 1:size(C2,2)
     points = C2{1,i};
     for j = 1:size(points,1)
-        scatter(points(:,2).*col+col1+20,points(:,3).*row,20,c(i),'filled');
+        scatter(points(:,2).*col+col1+20,points(:,3).*row,30,c(i),'filled');%+col1+20
     end
 end
-
+hold off
+% 
+% figure(3) ; clf ;
+% imshow(img_show) ;
+% hold on ;
+% [row1,col1,~] = size(img1);
+% for i = 1:size(C1,2)
+%     points = C1{1,i};
+%     for j = 1:size(points,1)
+%         X = points(:,2).*col1;
+%         Y = points(:,3).*row1;
+%         scatter(X,Y,10,'r','filled');
+%     end
+% end
+% 
+% [row,col,~] = size(img2);
+% for i = 1:size(C2,2)
+%     points = C2{1,i};
+%     for j = 1:size(points,1)
+%         scatter(points(:,2).*col+col1+20,points(:,3).*row,10,'r','filled');
+%     end
+% end
+% hold off
 
 
 end
